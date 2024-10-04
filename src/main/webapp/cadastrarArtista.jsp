@@ -7,19 +7,19 @@
 <title>Insert title here</title>
 </head>
 <body>
-	Tela de cadstro de pais
-	<form action="/fema3bccJsp/PaisControlador">
+	Tela de cadstro de artista
+	<form action="/fema3bccJsp/ArtistaControlador">
 		<br>
 		<label>Codigo</label>
-		<input type="text" name="codigoPais">
+		<input type="text" name="codigoArtista">
 		<br>
 		<br>
 		<label>Nome</label>
-		<input type="text" name="nomePais">
+		<input type="text" name="nomeArtista">
 		<br>
 		<br>	
-		<label>Sigla</label>
-		<input type="text" name="siglaPais">
+		<label>Gravadora</label>
+		<input type="text" name="gravadora">
 		<br>
 		<br>	
 		<input type="submit" name="operacao" value="Cadastrar">

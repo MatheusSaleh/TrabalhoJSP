@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class PaisControlador extends HttpServlet {
+public class ArtistaControlador extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -19,15 +19,15 @@ public class PaisControlador extends HttpServlet {
 		if (operacao.equals("Cadastrar")) {
 			cadastrar(request);
 			redirecionar(request, response, "menu.jsp");
-		} else if (operacao.equals("Cadastrar Pais")) {
-			redirecionar(request, response, "cadastrarPais.jsp");
-		} else if (operacao.equals("Consultar Pais")) {
-			List<Pais> paises = new PaisDao().getPaises();
-			request.setAttribute("paises", paises);
-			redirecionar(request, response, "consultarPais.jsp");
+		} else if (operacao.equals("Cadastrar Artista")) {
+			redirecionar(request, response, "cadastrarArtista.jsp");
+		} else if (operacao.equals("Consultar Artista")) {
+			List<Artista> artistas = new ArtistaDao().getArtistas();
+			request.setAttribute("artistas", artistas);
+			redirecionar(request, response, "consultarArtista.jsp");
 		} else if (operacao.equals("Excluir")) {
-			Integer id = Integer.parseInt(request.getParameter("codigoPais"));
-			new PaisDao().excluir(id);
+			Integer id = Integer.parseInt(request.getParameter("codigoArtista"));
+			new ArtistaDao().excluir(id);
 			redirecionar(request, response, "menu.jsp");	
 		}
 	}
@@ -40,16 +40,16 @@ public class PaisControlador extends HttpServlet {
 	}
 
 	private void cadastrar(HttpServletRequest req) {
-		String codigo = req.getParameter("codigoPais");
-		String nome = req.getParameter("nomePais");
-		String sigla = req.getParameter("siglaPais");
-		Pais p = new Pais();
-		p.setCodigo(Integer.parseInt(codigo));
-		p.setNome(nome);
-		p.setSigla(sigla);
+		String codigo = req.getParameter("codigoArtista");
+		String nome = req.getParameter("nomeArtista");
+		String gravadora = req.getParameter("gravadora");
+		Artista a = new Artista();
+		a.setCodigo(Integer.parseInt(codigo));
+		a.setNome(nome);
+		a.setGravadora(gravadora);
 
-		PaisDao dao = new PaisDao();
-		dao.add(p);
+		ArtistaDao dao = new ArtistaDao();
+		dao.add(a);
 
 	}
 

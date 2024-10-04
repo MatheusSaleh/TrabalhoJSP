@@ -10,6 +10,16 @@
     <servlet-name>Menu</servlet-name>
     <url-pattern>/Menu</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ArtistaControlador</display-name>
+    <servlet-name>ArtistaControlador</servlet-name>
+    <servlet-class>fema3bccJsp.ArtistaControlador</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ArtistaControlador</servlet-name>
+    <url-pattern>/ArtistaControlador</url-pattern>
+  </servlet-mapping>
   <display-name>fema3bccJsp</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -20,13 +30,22 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
-    <description></description>
-    <display-name>PaisControlador</display-name>
-    <servlet-name>PaisControlador</servlet-name>
-    <servlet-class>fema3bccJsp.PaisControlador</servlet-class>
+    <servlet-name>H2Console</servlet-name>
+    <servlet-class>org.h2.server.web.WebServlet</servlet-class>
+    <init-param>
+      <param-name>webAllowOthers</param-name>
+      <param-value>false</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
-    <servlet-name>PaisControlador</servlet-name>
-    <url-pattern>/PaisControlador</url-pattern>
+    <servlet-name>H2Console</servlet-name>
+    <url-pattern>/h2-console/*</url-pattern>
   </servlet-mapping>
+  <resource-ref>
+    <description>H2 Database</description>
+    <res-ref-name>jdbc/h2db</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
 </web-app>

@@ -1,12 +1,12 @@
 package fema3bccJsp;
 
-public class Pais {
+public class Artista {
 	
 	private Integer codigo;
 	
 	private String nome;
 	
-	private String sigla;
+	private String gravadora;
 
 	public Integer getCodigo() {
 		return codigo;
@@ -24,13 +24,15 @@ public class Pais {
 		this.nome = nome;
 	}
 
-	public String getSigla() {
-		return sigla;
+	public String getGravadora() {
+		return gravadora;
 	}
 
-	public void setSigla(String sigla) {
-		this.sigla = sigla;
+	public void setGravadora(String gravadora) {
+		this.gravadora = gravadora;
 	}
+
+	
 	
 	
 
