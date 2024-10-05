@@ -13,10 +13,20 @@ public class DatabaseConnection {
                 + "id INT PRIMARY KEY AUTO_INCREMENT, "
                 + "nome VARCHAR(255), "
                 + "gravadora VARCHAR(255))";
+        
+        String createTableAlbum = "CREATE TABLE IF NOT EXISTS album ("
+        		+ "id INT PRIMARY KEY AUTO_INCREMENT,"
+        		+ "nome VARCHAR(255))";
+        
+        String createTableMusica = "CREATE TABLE IF NOT EXISTS musica ("
+        		+ "id INT PRIMARY KEY AUTO_INCREMENT,"
+        		+ "nome VARCHAR(255))"; 
 
         Statement statement = connection.createStatement();
         statement.execute(createTableSQL);
-
+        statement.execute(createTableAlbum);
+        statement.execute(createTableMusica);
+        
         return connection;
     }
 }
