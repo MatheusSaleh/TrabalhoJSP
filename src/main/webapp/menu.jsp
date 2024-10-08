@@ -16,9 +16,26 @@
 	</form>
 	<br><br>
 
-	<form action="">
+	<form action="/fema3bccJsp/ArtistaControlador">
 		<input type="submit" name="operacao" value="Consultar Artista">
 	</form>
+	
+	<form action="/fema3bccJsp/AlbumControlador">
+		<input type="submit" name="operacao" value="Cadastrar Album">
+	</form>
+	
+	<form action="/fema3bccJsp/AlbumControlador">
+		<input type="submit" name="operacao" value="Consultar Album">
+	</form>
+	
+	<form action="/fema3bccJsp/MusicaControlador">
+		<input type="submit" name="operacao" value="Consultar Musica">
+	</form>
+	
+	<form action="/fema3bccJsp/MusicaControlador">
+		<input type="submit" name="operacao" value="Cadastrar Musica">
+	</form>
+	
 
 	<%
 		Connection conn = null;

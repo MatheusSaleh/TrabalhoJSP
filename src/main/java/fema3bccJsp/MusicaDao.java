@@ -28,7 +28,7 @@ public class MusicaDao {
         }
     }
     
-    public List<Musica> getAlbuns() {
+    public List<Musica> getMusicas() {
         List<Musica> musicas = new ArrayList<>();
         try (Connection connection = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
              PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_MUSICA);

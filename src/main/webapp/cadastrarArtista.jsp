@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Cadastrar Artista</title>
 </head>
 <body>
-	Tela de cadstro de artista
+	Tela de cadastro de artista
 	<form action="/fema3bccJsp/ArtistaControlador">
 		<br>
 		<label>Codigo</label>
